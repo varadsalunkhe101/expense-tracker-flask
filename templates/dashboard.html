@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+
+    <style>
+        body{
+            background: url("/static/images/ii4.jpg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .dashboard-card{
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        .welcome-text{
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 30px;
+        }
+
+        .action-btn{
+            font-size: 18px;
+            font-weight: 600;
+            padding: 12px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark shadow">
+    <div class="container-fluid">
+        <span class="navbar-brand fw-bold">Expense Tracker</span>
+        <a href="/" class="btn btn-danger">Logout</a>
+    </div>
+</nav>
+
+<div class="container d-flex justify-content-center align-items-center"
+     style="height: calc(100vh - 70px);">
+
+    <div class="col-md-6 dashboard-card text-center">
+
+        <h2 class="welcome-text">Welcome Admin</h2>
+
+        <div class="d-grid gap-3">
+
+            <a href="/add" class="btn btn-primary action-btn">
+                Add Expense
+            </a>
+
+            <a href="/view" class="btn btn-success action-btn">
+                View Expenses
+            </a>
+
+            <a href="/delete" class="btn btn-danger action-btn">
+                Delete Expense
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

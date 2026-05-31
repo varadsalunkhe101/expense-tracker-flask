@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Expense</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+
+    <style>
+        body{
+            background: url("/static/images/i2.jpeg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .delete-card{
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h3{
+            text-align: center;
+            font-weight: bold;
+            color: #212529;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+
+    <div class="col-md-5 card p-4 delete-card">
+
+        <h3>Delete Expense</h3>
+
+        <form method="POST" action="/delete">
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Expense ID</label>
+                <input type="number"
+                       name="id"
+                       class="form-control"
+                       placeholder="Enter Expense ID"
+                       required>
+            </div>
+
+            <button type="submit" class="btn btn-danger w-100">
+                Delete Expense
+            </button>
+
+        </form>
+
+        <a href="/dashboard" class="btn btn-secondary w-100 mt-3">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>

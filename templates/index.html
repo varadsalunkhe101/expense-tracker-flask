@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+
+    <style>
+        body{
+            background: url("/static/images/home.jpg") no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+
+        .hero-card{
+            background: rgba(255,255,255,0.92);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .title{
+            font-size: 3rem;
+            font-weight: bold;
+            color: #212529;
+        }
+
+        .subtitle{
+            color: #6c757d;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+
+    <div class="col-md-7 hero-card text-center">
+
+        <h1 class="title">Expense Tracker System</h1>
+
+        <p class="subtitle">
+            Track, manage and monitor your daily expenses efficiently.
+        </p>
+
+        <div class="row mt-4">
+
+            <div class="col-md-6 mb-2">
+                <a href="/login" class="btn btn-primary w-100 btn-lg">
+                    Login
+                </a>
+            </div>
+
+            <div class="col-md-6 mb-2">
+                <a href="/register" class="btn btn-success w-100 btn-lg">
+                    Register
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

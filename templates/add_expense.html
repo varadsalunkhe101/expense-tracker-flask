@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Expense</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+
+    <style>
+        body{
+            background: url("/static/images/i4.jpeg") no-repeat center center fixed;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .expense-card{
+            background: rgba(255,255,255,0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        h3{
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #343a40;
+        }
+
+        .btn-primary{
+            font-weight: 600;
+        }
+
+        .btn-secondary{
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+
+    <div class="col-md-5 card p-4 expense-card">
+
+        <h3>Add Expense</h3>
+
+        <form method="POST" action="/add">
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Amount</label>
+                <input type="number" name="amount" class="form-control" placeholder="Enter Amount" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label fw-bold">Reason</label>
+                <input type="text" name="reason" class="form-control" placeholder="Enter Expense Reason" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                Add Expense
+            </button>
+
+        </form>
+
+        <a href="/dashboard" class="btn btn-secondary mt-3 w-100">
+            Back to Dashboard
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
